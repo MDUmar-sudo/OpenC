@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "OpenC_backend": {
+      "main": "src/OpenC_backend/main.mo",
+      "type": "motoko"
+    },
+    "nft":{
+      "main": "src/NFT/nft.mo",
+      "type": "motoko"
+    },
+    "OpenC_frontend": {
+      "dependencies": [
+        "OpenC_backend"
+      ],
+      "source": [
+        "src/OpenC_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "OpenC_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
